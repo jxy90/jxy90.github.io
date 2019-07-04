@@ -300,45 +300,45 @@
       
         
           
-            <h1 id="React原则与生命周期"><a href="#React原则与生命周期" class="headerlink" title="React原则与生命周期"></a>React原则与生命周期</h1><p>代码相关: <a href="https://codesandbox.io/s/6n20nrzlxz" target="_blank" rel="noopener">https://codesandbox.io/s/6n20nrzlxz</a></p>
-<h2 id="何时创建组件-单一职责原则"><a href="#何时创建组件-单一职责原则" class="headerlink" title="何时创建组件:单一职责原则"></a>何时创建组件:单一职责原则</h2><ol>
+            <h1 id="React原则"><a href="#React原则" class="headerlink" title="React原则"></a>React原则</h1><p>代码相关: <a href="https://codesandbox.io/s/6n20nrzlxz" target="_blank" rel="noopener">https://codesandbox.io/s/6n20nrzlxz</a></p>
+<h4 id="何时创建组件-单一职责原则"><a href="#何时创建组件-单一职责原则" class="headerlink" title="何时创建组件:单一职责原则"></a>何时创建组件:单一职责原则</h4><ol>
 <li>每个组件只做一件事情 </li>
 <li>如果组件变得复杂那应该拆分成小组件 </li>
 </ol>
-<h2 id="数据状态管理-DRY原则"><a href="#数据状态管理-DRY原则" class="headerlink" title="数据状态管理 DRY原则"></a>数据状态管理 DRY原则</h2><ol>
+<h4 id="数据状态管理-DRY原则"><a href="#数据状态管理-DRY原则" class="headerlink" title="数据状态管理 DRY原则"></a>数据状态管理 DRY原则</h4><ol>
 <li>能计算得到的状态就要单独存储 </li>
 <li>组件尽量无状态f所需数据通过 props 获取</li>
 </ol>
-<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p><img src="/images/pasted-1.png" alt="upload successful"><br>图片来源:<a href="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank" rel="noopener">http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/</a></p>
-<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><ol>
+<h1 id="React生命周期"><a href="#React生命周期" class="headerlink" title="React生命周期"></a>React生命周期</h1><p><img src="/images/pasted-1.png" alt="upload successful"><br>图片来源:<a href="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank" rel="noopener">http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/</a></p>
+<h4 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h4><ol>
 <li>用初始化内部状态(很少使用)</li>
 <li>唯一可以直接修改 state 的地方</li>
 </ol>
-<h3 id="getDerivedStateFromProps-Derived-导出"><a href="#getDerivedStateFromProps-Derived-导出" class="headerlink" title="getDerivedStateFromProps(Derived-导出)"></a>getDerivedStateFromProps(Derived-导出)</h3><ol>
+<h4 id="getDerivedStateFromProps-Derived-导出"><a href="#getDerivedStateFromProps-Derived-导出" class="headerlink" title="getDerivedStateFromProps(Derived-导出)"></a>getDerivedStateFromProps(Derived-导出)</h4><ol>
 <li>当 state 需要从 props 初始化时使用 </li>
 <li>尽量不要使用(维护两者状态一致性会增加复杂度)</li>
 <li>每次 render 都会调用 </li>
 <li>典型场景: 表单控件获取默认值 </li>
 </ol>
-<h3 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h3><ol>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h4><ol>
 <li>UI 渲染完成后调用 </li>
 <li>只执行一次 </li>
 <li>典型场景: 获取外部资源</li>
 </ol>
-<h3 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a>componentWillMount</h3><ol>
+<h4 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount"></a>componentWillMount</h4><ol>
 <li>组件移除时被调用 </li>
 <li>典型场景: 资源释放</li>
 </ol>
-<h3 id="getSnapshotBeforeUpdate"><a href="#getSnapshotBeforeUpdate" class="headerlink" title="getSnapshotBeforeUpdate"></a>getSnapshotBeforeUpdate</h3><ol>
+<h4 id="getSnapshotBeforeUpdate"><a href="#getSnapshotBeforeUpdate" class="headerlink" title="getSnapshotBeforeUpdate"></a>getSnapshotBeforeUpdate</h4><ol>
 <li>在页面 render 之前调用,state 已更新 </li>
 <li>典型场景: 获取 render 之前的 DOM 状态</li>
 <li>它的返回值将作为 componentDidUpdate() 的第三个参数 “snapshot” 参数传递</li>
 </ol>
-<h3 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a>componentDidUpdate</h3><ol>
+<h4 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate"></a>componentDidUpdate</h4><ol>
 <li>在页面 UI 更新时调用</li>
 <li>典型场景:页面需要根据 props 变化重新获取数据</li>
 </ol>
-<h3 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a>shouldComponentUpdate</h3><ol>
+<h4 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate"></a>shouldComponentUpdate</h4><ol>
 <li>决定 Virtual DOM 是否要重绘 </li>
 <li>一般可以由 PureComponent 自动实现 </li>
 <li>典型场景: 性能优化</li>
