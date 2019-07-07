@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Rect,">
+  <meta name="keywords" content="React,">
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="React原则代码相关: https://codesandbox.io/s/6n20nrzlxz 何时创建组件:单一职责原则 每个组件只做一件事情  如果组件变得复杂那应该拆分成小组件   数据状态管理 DRY原则 能计算得到的状态就要单独存储  组件尽量无状态f所需数据通过 props 获取  React生命周期图片来源:http://projects.wojtekmaj.pl/react-li">
-<meta name="keywords" content="Rect">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React 原则与生命周期">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/React-重学/index.html">
@@ -88,7 +88,7 @@
 <meta property="og:description" content="React原则代码相关: https://codesandbox.io/s/6n20nrzlxz 何时创建组件:单一职责原则 每个组件只做一件事情  如果组件变得复杂那应该拆分成小组件   数据状态管理 DRY原则 能计算得到的状态就要单独存储  组件尽量无状态f所需数据通过 props 获取  React生命周期图片来源:http://projects.wojtekmaj.pl/react-li">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/pasted-1.png">
-<meta property="og:updated_time" content="2019-07-04T14:14:49.289Z">
+<meta property="og:updated_time" content="2019-07-07T14:19:36.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React 原则与生命周期">
 <meta name="twitter:description" content="React原则代码相关: https://codesandbox.io/s/6n20nrzlxz 何时创建组件:单一职责原则 每个组件只做一件事情  如果组件变得复杂那应该拆分成小组件   数据状态管理 DRY原则 能计算得到的状态就要单独存储  组件尽量无状态f所需数据通过 props 获取  React生命周期图片来源:http://projects.wojtekmaj.pl/react-li">
@@ -193,6 +193,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -240,7 +260,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="江小渔">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -274,6 +294,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -363,7 +405,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Rect/" rel="tag"># Rect</a>
+            <a href="/tags/React/" rel="tag"># React</a>
           
         </div>
       
@@ -385,6 +427,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/05/kafka在docker中的安装与使用/" rel="prev" title="kafka在docker中的安装与使用(Windows)">
+                kafka在docker中的安装与使用(Windows) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -450,6 +496,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="江小渔">
+            
               <p class="site-author-name" itemprop="name">江小渔</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -468,15 +516,24 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">1</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -484,6 +541,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jxy90" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1990jxy@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
